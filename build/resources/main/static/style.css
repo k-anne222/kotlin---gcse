@@ -1,0 +1,36 @@
+body {
+    background-color: #f0f0f0; /* Light grey background */
+    font-family: Arial, sans-serif; /* Sets a clean and modern font */
+}
+
+h1 {
+    color: #333; /* Dark grey colour for the header text */
+    text-align: center; /* Centres the header text */
+}
+
+#dynamic-message {
+    color: #555; /* Slightly lighter grey for the paragraph */
+    border: 1px solid #ddd; /* A subtle border */
+    padding: 10px; /* Some padding around the text */
+    margin: 20px; /* Space around the paragraph */
+    border-radius: 5px; /* Rounded corners for the border */
+    background-color: #fff; /* White background for the paragraph */
+}
+
+button {
+    background-color: #008CBA; /* A nice blue colour for the button */
+    color: white; /* White text on the button */
+    padding: 15px 32px; /* Top and bottom padding of 15px, left and right padding of 32px */
+    text-align: center; /* Centre the text on the button */
+    text-decoration: none; /* No underline on the text */
+    display: inline-block; /* Allows setting padding and margins on the button */
+    font-size: 16px; /* Sets the size of the text inside the button */
+    margin: 4px 2px; /* Small margin around the button for spacing */
+    cursor: pointer; /* Changes the cursor to indicate the button is clickable */
+    border: none; /* No border on the button */
+    border-radius: 4px; /* Rounded corners on the button */
+}
+
+button:hover {
+    background-color: #005f73; /* A darker blue for the button when hovered over */
+}
