@@ -12,7 +12,9 @@
 
 ## Target Audience/Users
 > The target audience/users of this website ... Are they GCSE students? Also, what subjects? etc.
-1. Only for GCSE students who wants to create their own quizs across any subjects
+1. Only for GCSE students who want to create their own quizzes across any subjects
+
+![Sitemap](https://github.com/k-anne222/kotlin---gcse/assets/61691961/7e12051d-853f-49e1-8655-03730c51cb18)
 
 ## Must TODO
 ## Extra TODO
