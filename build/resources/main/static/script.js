@@ -5,3 +5,4 @@ function updateMessage() {
 function showWarning() { 
     alert('Warning alert!')
 }
+
