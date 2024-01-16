@@ -16,14 +16,52 @@
 
     </head>
     <body>
+        <hd>Register</hd><br>
+        Create your account. It's free and only takes a minute.<br>
+        
+        <script src="script.js"></script>
+        <form id="first name" class = "signup">
+            <div>
+                <button id="first name" class = "signup" placeholder = "First Name" required></button>
+                <input type="text" required>
+            </div>
+        </form>
+
+        <form id="last name" class = "signup">
+            <div>
+                <button id="last name" class = "signup" placeholder = "Last Name" required></button>
+                <input type="text" required>
+            </div>
+        </form>
+
         <h1>Sign up</h1>
+            <div>
+                <button id = "button sign up" class = "signup" placeholder = "Sign Up"></button>
+            </div>
         <h2>Email</h2>
         <!-- an element for a text box to input user email -->
             <input type = "email" id = "email title ver">
+            <button id = "click email" class = "signup" type = text placeholder = "Email" required></button>
         <h2>Password</h2>
         <!-- an element for a text box to input user password -->
             <input type = "password" id = "password">
+            <div class="signup">
+                <input type="password" id="password signup" class="signup" placeholder="Password" char = 8+ required>
+                    <button id="togglePassword" class="signup" type="button">
+                        <i class="fas fa-eye"></i>
+                    </button>
+            </div>
+            <p> at least 8 characters</p><br> 
+            <p> at least one small character</p><br> 
+            <p> at least one capital letter</p><br>
+            <p> at least one number or symbol</p><br> 
+
+
+            <input type="checkbox" id="terms" class = "signup" value="I have accepted the Terms of Use & Privacy Policy">
+
         <h2> button type </h2>
-            <button type = "submit"></button> 
+            <button type = "submit" class = "signup" placeholder = "Register Now"></button> 
+
+            <p><u> Already have an account? Sign in </u></p>
     </body>
 </html>
