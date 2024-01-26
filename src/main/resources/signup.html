@@ -4,31 +4,56 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- the font size and colour
-        overall main design of the page -->
-        <link rel="stylesheet" href= ""> 
-        
         <!-- actual title and headings of page -->
         <title>Sign up</title>
 
-        <!-- script to ru1`n -->
-        <script src=""></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="static/style.css">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>        
     </head>
     <body>
-        <h1>Register</h1><br>
+        <h1>Register</h1>
         Create your account. It's free and only takes a minute.<br>
-        
-        <br><form id="first name" class = "signup">
-            <div>
+        <form id="registration" class = "signup">
+            <div class="mb-3">
+                <label class="form-label">First Name</label><br>
                 <input id="first name" class = "signup" placeholder = "First Name" type = text required></input>
             </div>
-        </form>
-
-        <form id="last name" class = "signup">
             <div>
+<<<<<<< HEAD
                 <input id = "last name" class = "signup" placeholder = "Last Name" type = text required></input> 
+=======
+                <label>Last Name</label><br>
+                <input id = "last name" class = "signup" placeholder = "Last Name" type = text required></input>
+>>>>>>> 641403edf7514a783dfc209d8e5a298a81694b0d
             </div>
+            <div>
+                <label>Email</label><br>
+            <!-- an element for a text box to input user email -->
+                <input id = "email" class = "signup" type = "email" placeholder = "Email" required></input>
+            </div>
+            <div>
+                <label>Password</label><br>
+            <!-- an element for a text box to input user password -->
+                <input type = "password" id = "password"  class="signup" placeholder = "Password" required></input>
+            </div>
+            <!-- <i class="fas fa-eye"></i> -->
+            <ul>
+                <li>at least 8 characters</li>
+                <li>at least one small character</li>
+                <li>at least one capital letter</li>
+                <li>at least one number or symbol</li>
+            </ul>
+    
+            <input type="checkbox" id="terms" class = "signup"><a href= "#">I have accepted the Terms of Use & Privacy Policy</a>
+            <br>
+            <button id = "button sign up" class = "signup" type = submit>Sign Up</button>
         </form>
+<<<<<<< HEAD
 
         <h2>Email</h2>
         <!-- an element for a text box to input user email -->
@@ -53,5 +78,8 @@
             <br><p><button id = "button sign up" class = "signup" type = submit>Sign Up</button></p>
 
             <p><a href = "index.html"> Already have an account? Sign in</a> 
+=======
+        <a href = "index.html"> Already have an account? Sign in</a> 
+>>>>>>> 641403edf7514a783dfc209d8e5a298a81694b0d
     </body>
 </html>
