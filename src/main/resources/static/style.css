@@ -1,8 +1,15 @@
 body {
     background-color: #f0f0f0; /*Light grey background*/
     font-family: Arial, sans-serif; /* Sets a clean and modern font */
+}
+
+/* id = main */
+#main{
     text-align: center;
-    /* a line that makes all the items to be located vertically centre */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 h1 {
@@ -10,6 +17,7 @@ h1 {
     text-align: center; /* Centres the header text */
 }
 
+/* id = dynamic-message */
 #dynamic-message {
     color: #555; /* Slightly lighter grey for the paragraph */
     border: 1px solid #ddd; /* A subtle border */
@@ -35,9 +43,4 @@ button {
 
 button:hover {
     background-color: #005f73; /* A darker blue for the button when hovered over */
-}
-
-/* "." -> class = signup */
-.signup{
-    
 }
