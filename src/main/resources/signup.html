@@ -16,41 +16,73 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>        
     </head>
     <body>
-        <div>
-            <h1>Register</h1>
-            Create your account. It's free and only takes a minute.<br>
-            <form id="registration">
-                <div class="mb-3">
+        <!-- <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+            <h1>Register</h1><br>
+            <p>
+                Create your account. It's free and only takes a minute.
+            </p>
+        </div> -->
+        <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+            <form class="row">
+                <div class="col-md-6">
                     <label class="form-label">First Name</label><br>
-                    <input id="first name" placeholder = "First Name" type = text required></input>
+                    <input id="first name" class="form-control" placeholder = "First Name" type = text required></input>
                 </div>
-                <div>
-                    <label>Last Name</label><br>
-                    <input id = "last name" placeholder = "Last Name" type = text required></input>
+                <div class="col-md-6">
+                    <label class="form-label">Last Name</label><br>
+                    <input id = "last name" class="form-control" placeholder = "Last Name" type = text required></input>
                 </div>
-                <div>
-                    <label>Email</label><br>
-                <!-- an element for a text box to input user email -->
-                    <input id = "email" type = "email" placeholder = "Email" required></input>
+                <div class="col-12">
+                    <label class="form-label">Email</label><br>
+                    <input id = "email" class="form-control" type = "email" placeholder = "Email" required></input>
                 </div>
-                <div>
-                    <label>Password</label><br>
-                <!-- an element for a text box to input user password -->
-                    <input type = "password" id = "password" placeholder = "Password" required></input>
+                <div class="col-12">
+                    <label for="Password" class="form-label">Password</label><br>
+                    <input type = "password" class="form-control" id = "password" placeholder = "Password" required></input>
                 </div>
-                <i class="fas fa-eye"></i>
-                <ul>
-                    <li>at least 8 characters</li>
-                    <li>at least one small character</li>
-                    <li>at least one capital letter</li>
-                    <li>at least one number or symbol</li>
-                </ul>
-        
-                <input type="checkbox" id="terms" ><a href= "#">I have accepted the Terms of Use & Privacy Policy</a>
-                <br>
-                <button id = "button sign up"  type = submit>Sign Up</button>
+                    <i class="fas fa-eye"></i>
+                    <ul>
+                        <li>at least 8 characters</li>
+                        <li>at least one small character</li>
+                        <li>at least one capital letter</li>
+                        <li>at least one number or symbol</li>
+                    </ul>
+                <div class="col-12">
+                    <input type="checkbox" id="terms" ><a href= "#">I have accepted the Terms of Use & Privacy Policy</a>
+                    <br>
+                    <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Check me out
+                    </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button id = "button sign up"  type = submit>Sign Up</button>
+                    <!-- <button type="submit" class="btn btn-primary">Sign in</button> -->
+                </div>
             </form>
             <a href = "index.html"> Already have an account? Sign in</a> 
-        </div>
+        </div>       
     </body>
 </html>
+
+<!-- <div class = "row">
+    <div class = "col-3">
+        
+    </div>
+    <div class = "col-4">
+
+    </div>
+</div>
+
+<div id="row1" class = "row">
+    <div class = "col-3">
+        
+    </div>
+</div>
+<div id="row2" class="row">
+    <div class = "col-4">
+
+    </div>
+</div> -->
