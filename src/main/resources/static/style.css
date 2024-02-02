@@ -1,6 +1,20 @@
 body {
     background-color: #f0f0f0; /*Light grey background*/
     font-family: Arial, sans-serif; /* Sets a clean and modern font */
+    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
+
+    <div class="mb-3 row">
+    <label for="Email" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+            <input type="text" readonly class="form-control-plaintext" id="Email" value="email@example.com">
+        </div>
+     </div>
+    <div class="mb-3 row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="signup" id="password">
+        </div>
+    </div>
 }
 
 /* id = main */
