@@ -73,6 +73,13 @@ fun main() {
                 // If not found, sends a plain text error message.
                 } ?: call.respondText("Failed to load signup.html", ContentType.Text.Plain)
             }
+            get("/selectLevel") {
+                val htmlContent = this::class.java.classLoader.getResource("select_level.html")?.readText()
+                htmlContent?.let { content ->
+                    call.respondText(content, ContentType.Text.Html)
+                // If not found, sends a plain text error message.
+                } ?: call.respondText("Failed to load select_level.html", ContentType.Text.Plain)
+            }
         }        
     // The server is instructed to keep running, awaiting requests.
     }.start(wait = true)
