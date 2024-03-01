@@ -9,6 +9,7 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="static/style.css">
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -34,29 +35,49 @@
                 </div>
             </div> -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light py-5">
-                <!-- <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button> -->
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">GCSE</a>
+                  <ul class="navbar-nav" id="main_navbar">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">GCSE</a>
+                      <div class="dropdown-menu" aria-labelledby="gcsesubjects">
+                        <a class="dropdown-item" href="#">English</a>
+                        <a class="dropdown-item" href="#">Maths</a>
+                        <a class="dropdown-item" href="#">Biology</a>
+                        <a class="dropdown-item" href="#">Chemistry</a>
+                        <a class="dropdown-item" href="#">Physics</a>
+                        <a class="dropdown-item" href="#">History</a>
+                        <a class="dropdown-item" href="#">Geography</a>
+                        <a class="dropdown-item" href="#">Computer Science</a>
+                        <a class="dropdown-item" href="#">Computer Technology</a>
+                        <a class="dropdown-item" href="#">Other</a>
+                      </div>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">A-Level</a>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">A-Level</a>
+                      <div class="dropdown-menu" aria-labelledby="alevelsubjects">
+                          <a class="dropdown-item" href="#">English</a>
+                          <a class="dropdown-item" href="#">Maths</a>
+                          <a class="dropdown-item" href="#">Biology</a>
+                          <a class="dropdown-item" href="#">Chemistry</a>
+                          <a class="dropdown-item" href="#">Physics</a>
+                          <a class="dropdown-item" href="#">History</a>
+                          <a class="dropdown-item" href="#">Geography</a>
+                          <a class="dropdown-item" href="#">Computer Science</a>
+                          <a class="dropdown-item" href="#">Computer Technology</a>
+                          <a class="dropdown-item" href="#">Other</a>
+                      </div>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Games</a>
                     </li>
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a class="nav-link dropdown-toggle" href="#" id="settingdrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Profile & Settings
                       </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                      <div class="dropdown-menu" aria-labelledby="setting">
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="#">Replace Password/Email</a>
+                        <a class="dropdown-item" href="#">Log Out</a>
                       </div>
                     </li>
                   </ul>
