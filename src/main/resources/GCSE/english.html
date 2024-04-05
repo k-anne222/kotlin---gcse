@@ -26,8 +26,9 @@
                     <div class="col-lg-4 mb-3">
                         <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="modal" data-target="#newFlashcard">+ Create a New Flashcard</button>
                     </div>
-                    <div class="col-lg-4 mb-3">
-                        <button type="button" class="btn btn-block btn-lg btn-info">+ Upload an Image</button>
+                    <div class="col-lg-4 mb-3"> 
+                        <input type="file" id="uploadImageButton" hidden/>
+                        <label for="uploadImageButton" class="btn btn-block btn-lg btn-info">+ Upload an Image</label>
                     </div>
                 </div>
                 <div class="row">
@@ -45,11 +46,17 @@
             <div class="modal-dialog modal-dialog-centered modal-xl">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title">Edit note</h4>
+                  <h4 class="modal-title">New note</h4>
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
+                        <div class="mb-3">
+                            <div class="form-floating">
+                                <label for="titleOfNote" class="col-form-label">Title:</label>
+                                <input type="text" class="form-control" id="titleOfNote" style="resize: none"></input>
+                            </div>
+                        </div>
                         <div class="mb-3">
                             <div class="form-floating">
                                 <textarea class="form-control" id="noteArea" style="height: 500px; resize: none"></textarea>
@@ -96,3 +103,34 @@
         </div>
     </body>
 </html>
+
+<!-- <script>
+    // This function will be called when the 'Save' button is clicked
+    function saveNote() {
+      // Get the value of the textarea
+      var noteContent = document.getElementById('noteArea').value;
+  
+      // Create a new button element
+      var newNoteButton = document.createElement('button');
+      newNoteButton.type = 'button';
+      newNoteButton.className = 'btn btn-block btn-lg btn-secondary p-3';
+      newNoteButton.innerText = noteContent.substring(0, 30) + '...'; // Use part of the content as the button text
+  
+      // Optional: Store the full content in the button for later use
+      newNoteButton.setAttribute('data-content', noteContent);
+  
+      // Append the new button to the notes list
+      var notesList = document.querySelector('.row').nextElementSibling; // Adjust the selector as needed
+      notesList.appendChild(newNoteButton);
+  
+      // Close the modal manually
+      $('#newNote').modal('hide');
+    }
+  
+    // Add the saveNote function to the 'Save' button
+    window.onload = function() {
+      var saveButton = document.querySelectorAll('.btn-primary.btn-default')[0];
+      saveButton.onclick = saveNote;
+    }
+  </script> -->
+  
