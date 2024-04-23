@@ -20,23 +20,30 @@
                     <h1 class="h1 my-5 text-info">English</h1>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 mb-3">
-                        <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="modal" data-target="#newNote">+ Create a New Note</button>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-6 mb-3">
+                                <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="modal" data-target="#newNote">+ Create a New Note</button>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="modal" data-target="#newFlashcard">+ Create a New Flashcard</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 mb-3">
+                                <button type="button" class="btn btn-block btn-lg btn-secondary p-3">Summary Note</button>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <button type="button" class="btn btn-block btn-lg btn-secondary p-3">Chapter 1 - Grammar 101</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-4 mb-3">
-                        <button type="button" class="btn btn-block btn-lg btn-info" data-toggle="modal" data-target="#newFlashcard">+ Create a New Flashcard</button>
-                    </div>
-                    <div class="col-lg-4 mb-3"> 
+                    <div class="col-lg-4">
                         <input type="file" id="uploadImageButton" hidden/>
-                        <label for="uploadImageButton" class="btn btn-block btn-lg btn-info">+ Upload an Image</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 mb-3">
-                        <button type="button" class="btn btn-block btn-lg btn-secondary p-3">Summary Note</button>
-                    </div>
-                    <div class="col-lg-4 mb-3">
-                        <button type="button" class="btn btn-block btn-lg btn-secondary p-3">Chapter 1 - Grammar 101</button>
+                        <label for="uploadImageButton" class="btn btn-block btn-lg btn-info mb-3">+ Upload an Image</label>
+                        <div id="imageDisplayColumn">
+                            <!-- dynamically added images will go here -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -101,36 +108,46 @@
               </div>
             </div>
         </div>
+
+        <script>
+            // listen for a change event on the file input element
+            // this event triggers when a user selects a file
+            document.getElementById('uploadImageButton').addEventListener('change', function(event) {
+                // create a new FileReader object which allows web applications to asynchronously read the contents of files
+                var reader = new FileReader();
+
+                // define the onload event handle
+                // this is called when the FileReader has read the file successfully
+                reader.onload = function(e) {
+                    // get the element that will contain the uploaded images
+                    let imageContainer = document.getElementById('imageDisplayColumn');
+                    // a variable can store an integer, string, float, object ect. and also an HTML element
+
+                    // create a new img (tag i.e. <img>) element that will display the uploaded image
+                    let newImage = document.createElement('img');
+                    // <img> where the 'newImage' is a variable which holds the element created i.e. <img>
+                    
+                    // set the source of the image element to the result of the file read (a Data URL representing the file's data)
+                    newImage.src = e.target.result;
+                    // add 'img-thumbnail' and 'mb-3' as classes to style the image with Bootstrap
+                    newImage.className = 'img-thumbnail mb-3';
+                    // set the width of the image to 100% to make it responsive
+                    newImage.style.width = '100%';
+                    // change the cursor to a pointer when hovering over the image
+                    newImage.style.cursor = 'pointer';
+                    // add an event listener that logs to the console when the image is clicked
+                    newImage.addEventListener('click', function() {
+                        console.log('Image clicked!', this.src);
+                    });
+
+                    // append the new img element to the container element
+                    imageContainer.appendChild(newImage);
+                };
+
+                // instruct the FileReader to read the first file selected as a Data URL
+                // this is the action that starts the file reading process and eventually triggers the onload event handler
+                reader.readAsDataURL(event.target.files[0]);
+            });
+        </script>     
     </body>
 </html>
-
-<!-- <script>
-    // This function will be called when the 'Save' button is clicked
-    function saveNote() {
-      // Get the value of the textarea
-      var noteContent = document.getElementById('noteArea').value;
-  
-      // Create a new button element
-      var newNoteButton = document.createElement('button');
-      newNoteButton.type = 'button';
-      newNoteButton.className = 'btn btn-block btn-lg btn-secondary p-3';
-      newNoteButton.innerText = noteContent.substring(0, 30) + '...'; // Use part of the content as the button text
-  
-      // Optional: Store the full content in the button for later use
-      newNoteButton.setAttribute('data-content', noteContent);
-  
-      // Append the new button to the notes list
-      var notesList = document.querySelector('.row').nextElementSibling; // Adjust the selector as needed
-      notesList.appendChild(newNoteButton);
-  
-      // Close the modal manually
-      $('#newNote').modal('hide');
-    }
-  
-    // Add the saveNote function to the 'Save' button
-    window.onload = function() {
-      var saveButton = document.querySelectorAll('.btn-primary.btn-default')[0];
-      saveButton.onclick = saveNote;
-    }
-  </script> -->
-  
